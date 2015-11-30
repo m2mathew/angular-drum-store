@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app="store">
+<!-- The above ng-app and value is called a directive which loads a module from the app.js file -->
+<head>
+	<title>Code School - Gem Store</title>
+	<link rel="stylesheet" type="text/css" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+</head>
+<body ng-controller="StoreController as store" class="container">
+	<h1 style="color:purple">{{ "Welcome to the Flatlander Gem Store!!" }}</h1>
+
+	<ul class="list-group">
+		<li class="list-group-item" ng-hide="store.product.soldOut" ng-repeat="product in store.products | orderBy:'-price'">
+			<h3>
+				{{product.name}}
+				<em class="pull-right"> {{product.price | currency}} </em>
+			</h3>
+			<!-- Image Gallery -->
+			<div class="gallery">
+				<img ng-src="{{ product.images[0] }}"/>
+			</div>
+			<p> {{product.description}} </p>
+			<button ng-show="store.product.canPurchase"> Add to cart </button>
+		</li>
+	</ul>
+
+</body>
+
+	<script type="text/javascript" src="./node_modules/angular/angular.min.js"></script>
+	<script type="text/javascript" src="./scripts/app.js"></script>
+</html>
