@@ -8,6 +8,18 @@
 		this.products = gems;
 	});
 
+	app.controller('PanelController', function() {
+		this.tab = 1;
+
+		this.selectTab = function(setTab) {
+			this.tab = setTab;
+		};
+
+		this.isSelected = function(checkTab) {
+			return this.tab === checkTab;
+		};
+	});
+
 	var gems = [
 		{
 			name: 'Dodecahedron',
@@ -15,9 +27,7 @@
 			description: 'Some gems have hidden qualities beyond their luster, beyond their shine... Dodeca is one of those gems.',
 			canPurchase: false,
 			soldOut: false,
-			images: [
-				'../images/dodecahedron-01-full.jpg'
-			]
+			images: '../images/dodecahedron-01-full.jpg'
 		},
 		{
 			name: 'Pentagonal Gem',
@@ -25,9 +35,7 @@
 			description: 'Five sides a pentagonal gem make. This beauty is a steal, but only for the listed price.',
 			canPurchase: true,
 			soldOut: false,
-			images: [
-				'../images/pentagon-01-full.jpeg'
-			]
+			images: '../images/pentagon-01-full.jpeg'
 		},
 		{
 			name: 'Hexagonal Gem',
@@ -35,9 +43,7 @@
 			description: 'This gem is brand new. Never been used. Also, there are six sides.',
 			canPurchase: true,
 			soldOut: false,
-			images: [
-				'../images/hexagon-01-full.jpg'
-			]
+			images: '../images/hexagon-01-full.jpg'
 		}
 	];
 })();
