@@ -2,11 +2,11 @@
 <html ng-app="store">
 <!-- The above ng-app and value is called a directive which loads a module from the app.js file -->
 <head>
-	<title>Code School - Gem Store</title>
+	<title>Angular Drum Store</title>
 	<link rel="stylesheet" type="text/css" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
 </head>
 <body ng-controller="StoreController as store" class="container">
-	<h1 style="color:purple">{{ "Welcome to the Flatlander Gem Store!!" }}</h1>
+	<h1 style="color:purple">{{ "Welcome to the Angular Drum Store!!" }}</h1>
 
 	<ul class="list-group">
 		<li class="list-group-item" ng-hide="store.product.soldOut" ng-repeat="product in store.products | orderBy:'-price'">
@@ -16,7 +16,7 @@
 			</h3>
 			<!-- Image Gallery -->
 			<div class="gallery">
-				<img ng-src="{{ product.images }}"/>
+				<img class="img-thumbnail img-responsive" ng-src="{{ product.images }}"/>
 			</div>
 			<section ng-controller="PanelController as panel">
 				<ul class="nav nav-pills">
