@@ -3,9 +3,9 @@
 A beginner tutorial to learn some basics of Angular.js
 
 
-### Flatlander Gem Store
+### Angular Drum Store
 
-Using directives, modules, controllers, and expressions, create an online store to sell gems
+Using directives, modules, controllers, and expressions, create an online store to sell drums
 
 
 ### Notes
